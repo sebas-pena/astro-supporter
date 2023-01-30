@@ -1,0 +1,67 @@
+{
+	"name": "Samsung Galaxy S21",
+	"description": "The latest flagship smartphone from Samsung, featuring a high-resolution display and powerful camera system",
+	"image": "https://http2.mlstatic.com/D_NQ_NP_842282-MLA49947859519_052022-O.jpg",
+	"price": 799.99,
+	"in_stock": true,
+	"quantity_available": 500,
+	"category": "Technology",
+	"subcategory": "Cell Phones",
+	"brand": "Samsung",
+	"model": "SM-G991B",
+	"dimensions": {
+		"height": 151.7,
+		"width": 71.2,
+		"depth": 7.9
+	},
+	"weight": 171,
+	"available_colors": [
+		"Phantom Black",
+		"Phantom White",
+		"Phantom Gray",
+		"Phantom Pink"
+	],
+	"operating_system": "Android",
+	"os_version": "11 (One UI 3)",
+	"processor": "Exynos 2100 (global) / Qualcomm Snapdragon 888 (USA)",
+	"ram": 8,
+	"internal_storage": 128,
+	"external_storage": "up to 1TB via microSD card (sold separately)",
+	"screen": {
+		"type": "Dynamic AMOLED 2X",
+		"size": 6.2,
+		"resolution": "2400 x 1080"
+	},
+	"rear_camera": {
+		"resolution": "12MP wide + 12MP ultrawide + 64MP telephoto",
+		"features": "Dual Pixel autofocus, optical image stabilization, 8K video recording"
+	},
+	"front_camera": {
+		"resolution": "10MP",
+		"features": "Dual Pixel autofocus"
+	},
+	"connectivity": {
+		"wifi": "802.11 a/b/g/n/ac/ax",
+		"bluetooth": "5.2",
+		"nfc": true,
+		"usb_port": "USB-C"
+	},
+	"sensors": [
+		"fingerprint (under display, ultrasonic)",
+		"accelerometer",
+		"gyroscope"
+	],
+	"battery": {
+		"capacity": 4000,
+		"type": "Li-Po",
+		"usage_time": "up to 24 hours"
+	},
+	"included_accessories": ["charger", "USB cable", "headphones"],
+	"warranty": {
+		"type": "manufacturer",
+		"duration": "12 months"
+	},
+	"network_compatibility": ["4G", "3G", "2G"],
+	"other_details": "IP68 water and dust resistance. Includes facial recognition",
+	"sim_compatibility": "nano-SIM"
+}
