@@ -6,7 +6,7 @@ const PromptInput = ({ placeholder, onSubmit, onChange }) => {
 	return (
 		<form
 			onSubmit={onSubmit}
-			className="w-full flex gap-2 rounded-xl shadow p-3 border border-white "
+			className="w-full flex gap-2 rounded-xl flex-col sm:flex-row shadow p-3 border border-white "
 		>
 			<div className="grow min-h-[56px] focus-within:outline focus-within:outline-gray-800 outline-2 rounded-lg">
 				<ReactTextareaAutosize
@@ -15,7 +15,7 @@ const PromptInput = ({ placeholder, onSubmit, onChange }) => {
 					onChange={(e) => onChange(e.target.value)}
 				/>
 			</div>
-			<QuestionButton type="submit" />
+			<QuestionButton type="submit" className="w-full sm:w-max" />
 		</form>
 	)
 }

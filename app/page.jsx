@@ -4,7 +4,7 @@ import PrimaryButton from "@/components/ui/button/Primary"
 
 const HomePage = () => {
 	return (
-		<section className="h-full flex items-center gap-2 py-4 px-2 ">
+		<section className="h-full flex flex-col-reverse md:flex-row items-center justify-center gap-2 py-4 px-2 ">
 			<div className="text-center">
 				<h2 className="max-w-md text-2xl font-semibold mb-5 py-2 rounded-lg text-slate-800">
 					Promote your products with the help of artificial intelligence.

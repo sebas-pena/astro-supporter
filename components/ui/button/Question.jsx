@@ -1,12 +1,11 @@
 import Image from "next/image"
 import React from "react"
 
-const QuestionButton = (props) => {
+const QuestionButton = ({ className, ...props }) => {
+	className = `${className} disabled:bg-blue-300 p-[8px] bg-blue-500 rounded-lg`
+
 	return (
-		<button
-			{...props}
-			className="disabled:bg-blue-300 h-[56px] w-[56px] bg-blue-500 p-2 rounded-lg"
-		>
+		<button {...props} className={className}>
 			<Image
 				width={40}
 				height={40}
