@@ -4,8 +4,8 @@ import PrimaryButton from "@/components/ui/button/Primary"
 import PromptResult from "@/components/ui/prompt/PromptResult"
 import PrimaryBorderButton from "@/components/ui/button/PrimaryBorder"
 import product from "@/json/product.json"
-import { clientGenerateDescription } from "@/lib/client/apiClient"
 import ApiRefModal from "@/components/ui/modals/ApiRef"
+import { serverGenerateProductDescription } from "@/lib/server/cohere"
 
 const apiRefData = {
 	endpoint: "/api/generate/product-json",
@@ -38,11 +38,22 @@ const AnswerPage = () => {
 			result: null,
 			responseStatus: "loading",
 		})
-		const { result, error } = await clientGenerateDescription(product)
-		setResponde({
-			result: result,
-			responseStatus: error ? "error" : "successful",
-		})
+		try {
+			const result = await serverGenerateProductDescription(
+				JSON.stringify(product, null, 2)
+			)
+			setResponde({
+				result: result,
+				responseStatus: "successful",
+				isJSON: true,
+			})
+		} catch (error) {
+			setResponde({
+				result:
+					"Oops! It seems something went wrong while generating your product description. Don't worry, I'm on it! Please try again later.",
+				responseStatus: "error",
+			})
+		}
 	}
 
 	return (
@@ -57,6 +68,7 @@ const AnswerPage = () => {
 			</div>
 
 			<PromptResult
+				experimental
 				response={response.result}
 				responseStatus={responseStatus}
 				placeholder="Let's begin crafting captivating descriptions by clicking on the button."
@@ -67,5 +79,3 @@ const AnswerPage = () => {
 		</>
 	)
 }
-
-export default AnswerPage
